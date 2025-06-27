@@ -1,0 +1,7 @@
+version: '3'
+services:
+  vue-docker:
+    build: ./
+    ports:
+      - "3014:8080"
+    container_name: vue-docker

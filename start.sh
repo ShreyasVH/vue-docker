@@ -1,1 +1,1 @@
-npm run dev;
+docker compose -p ${COMPOSE_PROJECT_NAME} -f docker-compose-dev.yml up --force-recreate

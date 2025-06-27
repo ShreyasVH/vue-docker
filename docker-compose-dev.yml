@@ -1,0 +1,12 @@
+version: '3'
+services:
+  vue-docker-dev:
+    build:
+      context: .
+      dockerfile: Dockerfile.dev
+    ports:
+      - "3014:5173"
+    volumes:
+      - ./:/app
+      - /app/node_modules
+    container_name: vue-docker-dev
