@@ -1,12 +1,13 @@
 # -------- Build Stage --------
-FROM node:alpine AS build
+FROM node:25.2.1-alpine AS build
 WORKDIR /app
 COPY . .
-RUN npm install
-RUN npm run build
+#RUN npm install -g yarn
+RUN yarn install
+RUN yarn run build
 
 # ----------------------------------------------------------------
-FROM node:alpine
+FROM node:25.2.1-alpine
 WORKDIR /app
 RUN npm install -g http-server
 COPY --from=build /app/dist ./dist

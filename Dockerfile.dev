@@ -1,6 +1,6 @@
-FROM node:alpine
+FROM node:25.2.1-alpine
 WORKDIR /app/
 COPY . .
-RUN npm install
+RUN yarn install
 
-ENTRYPOINT ["npm", "run", "dev"]
+ENTRYPOINT ["yarn", "run", "dev"]
