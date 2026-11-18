@@ -9,3 +9,5 @@ services:
       - ./:/app
       - /app/node_modules
     container_name: vue-docker-dev
+    environment:
+      VITE_ALLOWED_HOSTS: ${VITE_ALLOWED_HOSTS}
